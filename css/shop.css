@@ -1,0 +1,47 @@
+.lead {
+  margin: 16px 0 28px;
+  font-size: 1.2rem;
+}
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.chips a {
+  padding: 8px 20px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.chips a.on {
+  background: var(--ink);
+  color: var(--paper);
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+}
+.list a {
+  text-decoration: none;
+}
+.box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 280px;
+  background: #fff;
+  border-bottom: 8px solid var(--ink);
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+.box .vessel {
+  margin: 0;
+}
+.list p {
+  display: flex;
+  justify-content: space-between;
+  max-width: none;
+}
