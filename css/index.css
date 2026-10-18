@@ -1,0 +1,53 @@
+.hero {
+  padding-bottom: 0;
+}
+.hero h1 {
+  max-width: 12ch;
+}
+.hero p {
+  margin: 24px 0;
+}
+.cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 64px !important;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+.grid a {
+  text-decoration: none;
+}
+.tile {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50% 50% 12px 12px;
+  margin-bottom: 16px;
+}
+.promise {
+  background: #fff;
+}
+.promise ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.promise li {
+  border-top: 3px solid var(--ink);
+  padding-top: 18px;
+}
+.promise p {
+  margin-top: 8px;
+}
+.band {
+  background: var(--celadon);
+}
+.band p {
+  margin: 14px 0 26px;
+}

@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap");
+:root {
+  --paper: #edefea;
+  --ink: #1d2b3a;
+  --cobalt: #2f4b7c;
+  --celadon: #a8c3b1;
+  --ochre: #d8a23a;
+  --plum: #6b3a4e;
+  --line: #c9cec6;
+  --serif: "Young Serif", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.05rem/1.6 var(--sans);
+}
+a {
+  color: inherit;
+}
+:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.08;
+}
+h1 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+}
+h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+}
+h3 {
+  font-size: 1.4rem;
+}
+p {
+  max-width: 60ch;
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+section {
+  padding: 88px 0;
+}
+header {
+  border-bottom: 1px solid var(--line);
+}
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo {
+  font: 1.7rem var(--serif);
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover,
+nav a[aria-current] {
+  border-color: var(--ink);
+}
+.btn {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn.alt {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 12px 26px;
+}
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 56px 0 36px;
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+footer a {
+  display: block;
+  color: #cfd6dc;
+  text-decoration: none;
+  margin-top: 6px;
+}
+footer small {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  color: #93a0ab;
+}
+/* vessels drawn in css */
+.vessel {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.mug {
+  width: 130px;
+  height: 150px;
+  border-radius: 10px 10px 44px 44px;
+}
+.mug::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  top: 28px;
+  width: 48px;
+  height: 70px;
+  border: 14px solid;
+  border-color: inherit;
+  border-radius: 0 50px 50px 0;
+  border-left: 0;
+}
+.bowl {
+  width: 190px;
+  height: 95px;
+  border-radius: 0 0 190px 190px;
+}
+.vase {
+  width: 110px;
+  height: 210px;
+  border-radius: 30px 30px 55px 55px/60px 60px 55px 55px;
+  clip-path: polygon(
+    32% 0,
+    68% 0,
+    70% 22%,
+    100% 48%,
+    96% 100%,
+    4% 100%,
+    0 48%,
+    30% 22%
+  );
+}
+.plate {
+  width: 230px;
+  height: 34px;
+  border-radius: 50%;
+}
+.pitcher {
+  width: 120px;
+  height: 170px;
+  border-radius: 12px 12px 40px 40px;
+}
+.cup {
+  width: 100px;
+  height: 90px;
+  border-radius: 6px 6px 40px 40px;
+}
+.g-cobalt {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #5c7db5,
+    var(--cobalt) 60%,
+    #1b2f52
+  );
+  border-color: var(--cobalt);
+}
+.g-celadon {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #d5e6da,
+    var(--celadon) 60%,
+    #7e9d8b
+  );
+  border-color: var(--celadon);
+}
+.g-ochre {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #f0c870,
+    var(--ochre) 60%,
+    #a8771c
+  );
+  border-color: var(--ochre);
+}
+.g-plum {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #9a6279,
+    var(--plum) 60%,
+    #40202e
+  );
+  border-color: var(--plum);
+}
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 20px;
+  border-bottom: 10px solid var(--ink);
+  padding: 0 20px 0;
+  min-height: 260px;
+}
+.shelf .vessel {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  section {
+    padding: 56px 0;
+  }
+  .shelf {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
