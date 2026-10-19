@@ -1,0 +1,35 @@
+.lead {
+  margin: 16px 0 48px;
+  font-size: 1.2rem;
+}
+.steps {
+  list-style: none;
+  counter-reset: s;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 0 56px;
+}
+.steps li {
+  counter-increment: s;
+  border-top: 2px solid var(--ink);
+  padding: 24px 0 40px 64px;
+  position: relative;
+}
+.steps li::before {
+  content: counter(s);
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+.steps h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
