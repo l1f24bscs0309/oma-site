@@ -1,0 +1,31 @@
+.lead {
+  margin: 16px 0 40px;
+  font-size: 1.2rem;
+}
+.faq {
+  max-width: 760px;
+}
+details {
+  border-top: 2px solid var(--ink);
+  padding: 20px 0;
+}
+details:last-child {
+  border-bottom: 2px solid var(--ink);
+}
+summary {
+  font: 1.3rem var(--serif);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+summary::after {
+  content: "+";
+  font-family: var(--sans);
+}
+details[open] summary::after {
+  content: "\2212";
+}
+details p {
+  margin-top: 12px;
+}

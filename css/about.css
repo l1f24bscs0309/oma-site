@@ -1,0 +1,49 @@
+.intro p {
+  margin-top: 24px;
+  font-size: 1.25rem;
+}
+.intro h1 {
+  max-width: 14ch;
+}
+.vals {
+  background: #fff;
+}
+.cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.cols div {
+  padding: 28px;
+  border-radius: 24px 24px 4px 4px;
+  min-height: 240px;
+}
+.cols p {
+  margin-top: 10px;
+}
+.c1 {
+  background: var(--celadon);
+}
+.c2 {
+  background: var(--ochre);
+}
+.c3 {
+  background: var(--cobalt);
+  color: var(--paper);
+}
+.c4 {
+  background: var(--plum);
+  color: var(--paper);
+}
+.band {
+  background: var(--ink);
+  color: var(--paper);
+}
+.band p {
+  margin: 14px 0 26px;
+}
+.band .btn {
+  background: var(--paper);
+  color: var(--ink);
+}

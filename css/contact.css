@@ -1,0 +1,53 @@
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.two p {
+  margin: 20px 0 32px;
+}
+dl {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px 20px;
+}
+dt {
+  font-weight: 700;
+}
+form {
+  background: #fff;
+  padding: 36px;
+  border-bottom: 8px solid var(--ink);
+  display: grid;
+  gap: 8px;
+}
+label {
+  font-weight: 700;
+  margin-top: 10px;
+}
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 12px 14px;
+  border: 2px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 8px;
+  width: 100%;
+}
+form .btn {
+  margin-top: 20px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  justify-self: start;
+}
+@media (max-width: 800px) {
+  .two {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
