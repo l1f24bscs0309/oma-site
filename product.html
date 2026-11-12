@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/product.css" />
+    <script src="js/product.js" defer></script>
   </head>
   <body>
     <header>
@@ -36,11 +37,43 @@
               coffee or the last tea.
             </p>
             <h3>Glaze</h3>
-            <div class="sw">
-              <span class="g-cobalt"></span><span class="g-celadon"></span
-              ><span class="g-ochre"></span><span class="g-plum"></span>
+            <div class="sw" role="group" aria-label="Choose a glaze">
+              <button
+                type="button"
+                class="g-cobalt"
+                data-glaze="cobalt"
+                data-glaze-name="Cobalt"
+                aria-label="Cobalt glaze"
+                aria-pressed="true"
+              ></button>
+              <button
+                type="button"
+                class="g-celadon"
+                data-glaze="celadon"
+                data-glaze-name="Celadon"
+                aria-label="Celadon glaze"
+                aria-pressed="false"
+              ></button>
+              <button
+                type="button"
+                class="g-ochre"
+                data-glaze="ochre"
+                data-glaze-name="Ochre"
+                aria-label="Ochre glaze"
+                aria-pressed="false"
+              ></button>
+              <button
+                type="button"
+                class="g-plum"
+                data-glaze="plum"
+                data-glaze-name="Plum"
+                aria-label="Plum glaze"
+                aria-pressed="false"
+              ></button>
             </div>
-            <p class="small">Cobalt shown. Also in celadon, ochre and plum.</p>
+            <p class="small" data-glaze-note aria-live="polite">
+              Cobalt shown. Also in celadon, ochre and plum.
+            </p>
             <p><a class="btn" href="contact.html">Order this mug</a></p>
             <dl>
               <dt>Size</dt>

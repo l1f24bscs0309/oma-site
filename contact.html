@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <script src="js/contact.js" defer></script>
   </head>
   <body>
     <header>
@@ -41,11 +42,27 @@
               <dd>Saturday, 11am to 5pm</dd>
             </dl>
           </div>
-          <form action="#" method="post">
-            <label for="n">Your name</label
-            ><input id="n" name="name" type="text" />
-            <label for="e">Email</label
-            ><input id="e" name="email" type="email" />
+          <form action="#" method="post" novalidate data-contact-form>
+            <label for="n">Your name</label>
+            <input
+              id="n"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              aria-describedby="err-n"
+            />
+            <p class="err" id="err-n" aria-live="polite"></p>
+            <label for="e">Email</label>
+            <input
+              id="e"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              aria-describedby="err-e"
+            />
+            <p class="err" id="err-e" aria-live="polite"></p>
             <label for="t">What can we help with?</label>
             <select id="t" name="topic">
               <option>An order</option>
@@ -53,9 +70,17 @@
               <option>Wholesale</option>
               <option>Something else</option>
             </select>
-            <label for="m">Message</label
-            ><textarea id="m" name="message" rows="5"></textarea>
+            <label for="m">Message</label>
+            <textarea
+              id="m"
+              name="message"
+              rows="5"
+              required
+              aria-describedby="err-m"
+            ></textarea>
+            <p class="err" id="err-m" aria-live="polite"></p>
             <button class="btn" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>

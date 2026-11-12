@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/care.css" />
+    <script src="js/care.js" defer></script>
   </head>
   <body>
     <header>
@@ -31,39 +32,59 @@
             Stoneware is tough. A few habits will keep the glaze bright for
             decades.
           </p>
-          <div class="faq">
-            <details open>
-              <summary>Can I use the dishwasher?</summary>
-              <p>
-                Yes. Every glaze is dishwasher safe. Hand washing keeps the
-                color deeper for longer.
-              </p>
-            </details>
-            <details>
-              <summary>Can I use the microwave or oven?</summary>
-              <p>
-                Yes to both. Oven use is safe up to 220°C. Avoid moving a hot
-                piece straight onto a cold or wet surface.
-              </p>
-            </details>
-            <details>
-              <summary>What are the small marks on the base?</summary>
-              <p>
-                They are kiln stilt marks and wheel lines. They show the piece
-                was made by hand.
-              </p>
-            </details>
-            <details>
-              <summary>What if a piece arrives damaged?</summary>
-              <p>
-                Send us a photo within 7 days through the contact page and we
-                will replace it.
-              </p>
-            </details>
-            <details>
-              <summary>Is the glaze food safe?</summary>
-              <p>Yes. All glazes are lead-free and tested for food contact.</p>
-            </details>
+          <div class="faq" data-accordion>
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="true" aria-controls="faq-dishwasher">
+                Can I use the dishwasher?
+              </button>
+              <div class="acc-panel" id="faq-dishwasher">
+                <p>
+                  Yes. Every glaze is dishwasher safe. Hand washing keeps the
+                  color deeper for longer.
+                </p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-heat">
+                Can I use the microwave or oven?
+              </button>
+              <div class="acc-panel" id="faq-heat" hidden>
+                <p>
+                  Yes to both. Oven use is safe up to 220°C. Avoid moving a hot
+                  piece straight onto a cold or wet surface.
+                </p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-marks">
+                What are the small marks on the base?
+              </button>
+              <div class="acc-panel" id="faq-marks" hidden>
+                <p>
+                  They are kiln stilt marks and wheel lines. They show the piece
+                  was made by hand.
+                </p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-damage">
+                What if a piece arrives damaged?
+              </button>
+              <div class="acc-panel" id="faq-damage" hidden>
+                <p>
+                  Send us a photo within 7 days through the contact page and we
+                  will replace it.
+                </p>
+              </div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-food-safe">
+                Is the glaze food safe?
+              </button>
+              <div class="acc-panel" id="faq-food-safe" hidden>
+                <p>Yes. All glazes are lead-free and tested for food contact.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
